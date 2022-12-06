@@ -14,7 +14,9 @@ public class EqualNotEqual {
   boolean differentLength = albumLengthA != albumLengthB;
 	}
 }
+
 //Greater/Less Than or Equal To
+
 public class GreaterThanEqualTo {
   	public static void main(String[] args){
       double recommendedWaterIntake = 8;

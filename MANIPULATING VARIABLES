@@ -1,0 +1,28 @@
+- 👋 Hi, I’m @LeonieTa
+
+
+// Equals and Not Equals
+
+public class EqualNotEqual {
+	public static void main(String[] args) {   
+  int songsA = 9;
+  int songsB = 9;
+  int albumLengthA = 41;
+  int albumLengthB = 53;
+  
+  boolean sameNumberOfSongs = songsA == songsB;
+  boolean differentLength = albumLengthA != albumLengthB;
+	}
+}
+//Greater/Less Than or Equal To
+public class GreaterThanEqualTo {
+  	public static void main(String[] args){
+      double recommendedWaterIntake = 8;
+      double daysInChallenge = 30;
+      double yourWaterIntake = 235.5;
+      double totalRecommendedAmount = recommendedWaterIntake * daysInChallenge;
+      boolean isChallengeComplete = yourWaterIntake >= totalRecommendedAmount;
+      //check if it is at least as much as 
+      System.out.println (isChallengeComplete);
+    }       
+}

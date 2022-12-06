@@ -2,7 +2,6 @@
 
 
 // Equals and Not Equals
-
 public class EqualNotEqual {
 	public static void main(String[] args) {   
   int songsA = 9;
@@ -16,7 +15,6 @@ public class EqualNotEqual {
 }
 
 //Greater/Less Than or Equal To
-
 public class GreaterThanEqualTo {
   	public static void main(String[] args){
       double recommendedWaterIntake = 8;
@@ -31,7 +29,6 @@ public class GreaterThanEqualTo {
 
 
 //.equals()
-
 public class Song {
   	public static void main(String[] args){
       String line1 = "Nah nah nah nah nah nah nah nah nah yeah";
@@ -43,4 +40,15 @@ public class Song {
       System.out.println (line2.equals(line3));
       // print whether line2 and line3 are equal
     }
+}
+
+//String Concatenation
+public class Zoo {
+  	public static void main(String[] args){
+      int animals = 12;
+      String species = "zebra";
+      String zooDescription = "Our zoo has " + animals + " " + species + "s!";
+      //
+      System.out.println(zooDescription);
+    }       
 }

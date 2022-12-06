@@ -1,0 +1,22 @@
+- 👋 Hi, I’m @LeonieTa
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+
+<!---
+LeonieTa/LeonieTa is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+
+public class EqualNotEqual {
+	public static void main(String[] args) {   
+  int songsA = 9;
+  int songsB = 9;
+  int albumLengthA = 41;
+  int albumLengthB = 53;
+  
+  boolean sameNumberOfSongs = songsA == songsB;
+  boolean differentLength = albumLengthA != albumLengthB;
+	}
+}

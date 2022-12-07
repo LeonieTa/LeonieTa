@@ -1,0 +1,41 @@
+- 👋 Hi, I’m @LeonieTa
+//Classes: Constructor Parameters
+public class Store {
+  // instance fields
+  String productType;
+
+  
+  // constructor method
+    public Store(String product)
+    {
+     productType = product;
+     //set the instance variable productType equal to the product parameter
+     }
+  
+  // main method
+  public static void main(String[] args) {
+    
+    
+  }
+}
+
+
+//Classes: Assigning Values to Instance Fields
+public class Store {
+  // instance fields
+  String productType;
+  
+  // constructor method
+  public Store(String product) {
+    productType = product;
+  }
+  
+  // main method
+  public static void main(String[] args) {
+    Store lemonadeStand = new Store("lemonade");
+    //Use "lemonade" as the parameter value
+   System.out.println(lemonadeStand.productType);
+   //Print the instance field productType from lemonadeStand
+    
+  }
+}

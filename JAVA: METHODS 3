@@ -1,0 +1,27 @@
+- 👋 Hi, I’m @LeonieTa
+
+//Scope
+
+public class Store {
+  // instance fields
+  String cookie;
+  
+  // constructor method
+  public Store(String product) {
+    cookie = product;
+  }
+  
+  // advertise method
+  public void cookie() {
+    String message = "Selling " + cookie + "!";
+		System.out.println(message);
+  }
+  
+  // main method
+  public static void main(String[] args) {
+    String cookie = "Cookies";
+    Store cookieShop = new Store(cookie);
+    
+    cookieShop.cookie();
+  }
+}

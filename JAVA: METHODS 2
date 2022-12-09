@@ -1,0 +1,29 @@
+- 👋 Hi, I’m @LeonieTa
+
+//Calling Methods
+
+public class Store {
+  // instance fields
+  String productType;
+
+  // constructor method
+  public Store(String product) {
+    productType = product;
+  }
+  
+  // advertise method
+  public void advertise() {
+		System.out.println("Selling " + productType + "!");
+    System.out.println("Come spend some money!");
+  }
+
+  // main method
+  public static void main(String[] args) {
+    Store lemonadeStand = new Store("Lemonade");
+  // Call a method on an object 
+  lemonadeStand.advertise(); 
+  //call the advertise() method on the lemonadeStand object two more times
+  lemonadeStand.advertise();
+  lemonadeStand.advertise(); 
+  }
+}

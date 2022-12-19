@@ -1,3 +1,5 @@
+//Adding Parameters
+
 public class Store {
   // instance fields
   String productType;

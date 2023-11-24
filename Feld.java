@@ -120,7 +120,6 @@
  			this.besetztdurchAmeisenkolonie = value;
  	
  		}
- 	
  	/**
  	
  		 

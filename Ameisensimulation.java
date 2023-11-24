@@ -1,82 +1,27 @@
  
- 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
  
  
  /**
   
   * @generated
   */
+
+
  public class Ameisensimulation {
- 
- 
- 	/**	 * @generated
- 		 */
- 	    private int runde;
- 	
- 	/**	 * @generated
- 	
- 		 */
- 	
- 	    private boolean existiertAmeisenkolonie;
- 	
- 	
- 	
- 	/**
- 		 
- 		 * getter for attribute runde : int
- 		 * @accessor runde
- 		 * @generated
- 		 */
- 		public int getRunde() {
- 			return this.runde;
- 		}
- 		/**
- 		 
- 		 * setter for attribute runde : int
- 		 * @accessor runde
- 		 * @generated
- 		 */
- 		public void setRunde(int value) {
- 			this.runde = value;
- 		}
- 	
- 	/**
- 	
- 		 
- 	
- 		 * getter for attribute existiertAmeisenkolonie : boolean
- 	
- 		 * @accessor existiertAmeisenkolonie
- 	
- 		 * @generated
- 	
- 		 */
- 	
- 		public boolean isExistiertAmeisenkolonie() {
- 	
- 			return this.existiertAmeisenkolonie;
- 	
- 		}
- 	
- 		/**
- 	
- 		 
- 	
- 		 * setter for attribute existiertAmeisenkolonie : boolean
- 	
- 		 * @accessor existiertAmeisenkolonie
- 	
- 		 * @generated
- 	
- 		 */
- 	
- 		public void setExistiertAmeisenkolonie(boolean value) {
- 	
- 			this.existiertAmeisenkolonie = value;
- 	
- 		}
- 	
- 	
+	    private int runde;
+	    private int totalAmeisen = 6;
+	    private int maxAmeisen = 100;
+	    private boolean existiertAmeisenkolonie;
+	    private List<Ameise> ameiseList;
+  
+	    public Ameisensimulation() {
+	       this.runde = 1;
+           this.existiertAmeisenkolonie = false;
+           this.ameiseList = new ArrayList<>();
+ }
  
  	
  	   
@@ -85,13 +30,10 @@
  		 * @generated
  		 */	
  	    public void erstelleKarte() {
- 			
  	    	
- 			// Start of user code default.ameisenkolonie.classdiag::Ameisensimulation::erstelleKarte
- 			// TODO should be implemented		
- 	    	
- 			// End of user code  	
  	    }
+
+
  	
  	/**
  	
@@ -125,10 +67,13 @@
  	
  		 */	
  	
- 	    public void generiereMaennchen() {
- 	
+ 	    public void generiereMaennchen() 
+ 	    {
+ 	          boolean add;
+ 	          for (int i = 0; i < 5; i++) {
+ 	          add = ameiseList.add(new Ameise("Maennchen"));
  			
- 	
+ 	          }
  	    	
  	
  			// Start of user code default.ameisenkolonie.classdiag::Ameisensimulation::generiereMaennchen
@@ -140,7 +85,10 @@
  			// End of user code  	
  	
  	    }
- 	
+ 	   private void addMaennchen() {
+ 		// TODO Auto-generated method stub
+
+ 		}
  	/**
  	
  	   	 * 
@@ -150,9 +98,10 @@
  		 */	
  	
  	    public void generiereKoenigin() {
- 	
- 			
- 	
+ 	    	   boolean add;
+ 	    	   
+ 	           ameiseList.add(new Ameise("Koenigin"));
+ 	       }
  	    	
  	
  			// Start of user code default.ameisenkolonie.classdiag::Ameisensimulation::generiereKoenigin
@@ -163,7 +112,7 @@
  	
  			// End of user code  	
  	
- 	    }
+ 	 
   /**
  	
  	   	 * 
@@ -172,11 +121,20 @@
  	
  		 */	
  	
- 	    public void naechsteRunde() {
+ 	    public void naechsteRunde()
+ 	    {
  	
- 			
- 	
- 	    	
+ 	           runde++;
+
+ 	           // In jeder Runde kann jede Ameise eine Aktion ausführen
+ 	           for (Ameise ameise : ameiseList) {
+ 	               ameise.move();
+ 	           }
+ 	          // Alle 10 Runden wird ein weiteres männliches Ameise hinzugefügt, wenn keine Kolonie existiert
+ 	          if (runde % 10 == 0 && !existiertAmeisenkolonie) {
+ 	             addMaennchen();
+ 	         }
+ 	          
  	
  			// Start of user code default.ameisenkolonie.classdiag::Ameisensimulation::naechsteRunde
  	

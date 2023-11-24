@@ -38,14 +38,10 @@
  		 * @accessor nahrungGefunden
  		 * @generated
  		 */
- 		public abstract void setNahrungGefunden(boolean value); {
+ 		public void setNahrungGefunden(boolean value) {
  		} 
- 		  protected abstract Feld nextFeld();
- 		  protected abstract void turnAround();
- 		  public boolean isSameColony() {
- 			// TODO Auto-generated method stub
- 			return false;
- 			}
+
+ 		  protected void umdrehen()
  
  		{
  			boolean value = false;
@@ -69,18 +65,12 @@
 
  		        // Überprüfen, ob das nächste Feld zu einer anderen Kolonie gehört
  		        // Wenn ja, drehen sie sich um 180 Grad
- 		       if (!isSameColony(nextFeld())) {
+ 		       if (isFremdeKolonie()) {
  		            // Wenn auf eine andere Kolonie getroffen wird, drehen sich um 180 Grad
- 		            turnAround();
- 		        }
+ 		            umdrehen();
+ 		      }
  		    }
 
- 		    private boolean isSameColony(Feld nextFeld) {
- 		        // Prüfen, ob das nächste Feld zur gleichen Kolonie gehört
- 		    	return nextFeld != null && nextFeld.isSameColony() == this.isSameColony();
- 		    }
- 		
- 	
 
  		public boolean isFremdeKolonie() {
  	

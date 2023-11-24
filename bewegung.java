@@ -160,5 +160,13 @@
       public String toString() {
         return literal;
       }
-  
+      
+      public void geradeaus() {
+      }
+      public void links() {
+      }
+      public void rechts() {
+      }
+      public void umdrehen() {
+      }
   }
